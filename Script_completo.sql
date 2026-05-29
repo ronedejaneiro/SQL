@@ -1,8 +1,5 @@
  PROJETO: Sistema de Gerenciamento de Fornecedores e Peças
 
- 1. DEFINIÇÃO DO ESQUEMA (DDL)
- Criação das tabelas com chaves primárias e estrangeiras para integridade referencial.
-
 CREATE TABLE fornecedores (
     fid INT NOT NULL PRIMARY KEY,
     fnome VARCHAR(20) NOT NULL,
@@ -24,8 +21,7 @@ CREATE TABLE catalogo (
     FOREIGN KEY (fid) REFERENCES fornecedores(fid)
 );
 
--- 2. INSERÇÃO DE DADOS (DML)
--- Dados para simulação de casos reais de negócios e estoque.
+
 
 INSERT INTO fornecedores (fid, fnome, ende) VALUES
 (1, 'Tech Solutions Ltda.', 'Rua A, 123, SP'),
@@ -59,8 +55,7 @@ INSERT INTO catalogo (fid, pid, preco) VALUES
 (4, 109, 100.00),
 (5, 110, 150.00);
 
--- 3. CONSULTAS E ANÁLISE DE DADOS (DQL)
--- Demonstração de habilidades em Joins, Filtros e Lógica de Conjuntos.
+
 
 -- Q1: Obter o nome dos fornecedores que fornecem alguma peça vermelha.
 SELECT DISTINCT f.fnome
